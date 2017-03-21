@@ -49,7 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="form-group row">
 				<label for="text-input" class="col-2 col-form-label">Country</label>
 				<div class="col-7">
-					<input class="form-control" name="country" type="text" value="" id="country">
+					<!-- <input class="form-control" name="country" type="select" value="" id="country"> -->
+					<select class="form-control" id="country" name="country">
+						<!-- <option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option> -->
+					</select>
 				</div>
 			</div>
 
@@ -72,7 +79,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</label>
 			</div>
 
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<div class="form-group row">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
 
 		</form>
 
