@@ -1,0 +1,15 @@
+CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20), -> species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+
+
+CREATE TABLE accounts (
+     id MEDIUMINT AUTO_INCREMENT,
+     userName VARCHAR(20) NOT NULL,
+     password VARCHAR(20) NOT NULL,
+	 email VARCHAR(254) NOT NULL,
+	 country VARCHAR(20) NOT NULL,
+	 phone VARCHAR(20) NOT NULL,
+	 termsApproved  BOOLEAN DEFAULT NULL,
+	 PRIMARY KEY (id)
+);
+
+CREATE USER 'inventivaAdmin'@'localhost' IDENTIFIED BY '1234';
