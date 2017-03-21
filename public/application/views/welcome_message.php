@@ -1,89 +1,119 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
-<html lang="en">
+
+
+<!DOCTYPE html>
+<html>
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Account Administration</title>
 
-	<style type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
 
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
+	<style media="screen">
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
+	body {padding-top:40px;}
 
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
 	</style>
+
 </head>
 <body>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<div class="container">
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<form class="form-horizontal">
+			<div class="form-group row">
+				<label for="example-text-input" class="col-2 col-form-label">Text</label>
+				<div class="col-10">
+					<input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-search-input" class="col-2 col-form-label">Search</label>
+				<div class="col-10">
+					<input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-email-input" class="col-2 col-form-label">Email</label>
+				<div class="col-10">
+					<input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-url-input" class="col-2 col-form-label">URL</label>
+				<div class="col-10">
+					<input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+				<div class="col-10">
+					<input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-password-input" class="col-2 col-form-label">Password</label>
+				<div class="col-10">
+					<input class="form-control" type="password" value="hunter2" id="example-password-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-number-input" class="col-2 col-form-label">Number</label>
+				<div class="col-10">
+					<input class="form-control" type="number" value="42" id="example-number-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
+				<div class="col-10">
+					<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-date-input" class="col-2 col-form-label">Date</label>
+				<div class="col-10">
+					<input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-month-input" class="col-2 col-form-label">Month</label>
+				<div class="col-10">
+					<input class="form-control" type="month" value="2011-08" id="example-month-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-week-input" class="col-2 col-form-label">Week</label>
+				<div class="col-10">
+					<input class="form-control" type="week" value="2011-W33" id="example-week-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-time-input" class="col-2 col-form-label">Time</label>
+				<div class="col-10">
+					<input class="form-control" type="time" value="13:45:00" id="example-time-input">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="example-color-input" class="col-2 col-form-label">Color</label>
+				<div class="col-10">
+					<input class="form-control" type="color" value="#563d7c" id="example-color-input">
+				</div>
+			</div>
+		</form>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
+
+
+
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 </body>
 </html>
