@@ -24,84 +24,56 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container">
 
 		<form class="form-horizontal">
+
 			<div class="form-group row">
-				<label for="example-text-input" class="col-2 col-form-label">Text</label>
-				<div class="col-10">
-					<input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+				<label for="text-input" class="col-2 col-form-label">User Name</label>
+				<div class="col-7">
+					<input class="form-control" name="userName" type="text" value="" id="userName">
 				</div>
 			</div>
+
 			<div class="form-group row">
-				<label for="example-search-input" class="col-2 col-form-label">Search</label>
-				<div class="col-10">
-					<input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+				<label for="password-input" class="col-2 col-form-label">Password</label>
+				<div class="col-7">
+					<input class="form-control" name="password" type="password" value="" id="password">
 				</div>
 			</div>
+
 			<div class="form-group row">
-				<label for="example-email-input" class="col-2 col-form-label">Email</label>
-				<div class="col-10">
-					<input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+				<label for="email-input" class="col-2 col-form-label">Email</label>
+				<div class="col-7">
+					<input class="form-control" name="email" type="email" value="" id="email">
 				</div>
 			</div>
+
 			<div class="form-group row">
-				<label for="example-url-input" class="col-2 col-form-label">URL</label>
-				<div class="col-10">
-					<input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
+				<label for="text-input" class="col-2 col-form-label">Country</label>
+				<div class="col-7">
+					<input class="form-control" name="country" type="text" value="" id="country">
 				</div>
 			</div>
+
+
 			<div class="form-group row">
-				<label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
-				<div class="col-10">
-					<input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+				<label for="tel-input" class="col-2 col-form-label">Phone</label>
+				<div class="col-2">
+					<input class="form-control" name="phonePrefix" type="tel" value="" id="phonePrefix">
+				</div>
+				-
+				<div class="col-5">
+					<input class="form-control" name="phoneSuffix" type="tel" value="" id="phoneSuffix">
 				</div>
 			</div>
-			<div class="form-group row">
-				<label for="example-password-input" class="col-2 col-form-label">Password</label>
-				<div class="col-10">
-					<input class="form-control" type="password" value="hunter2" id="example-password-input">
-				</div>
+
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="checkbox" name="termsApproved" class="form-check-input" id="termsApproved">
+					Terms & Conditions
+				</label>
 			</div>
-			<div class="form-group row">
-				<label for="example-number-input" class="col-2 col-form-label">Number</label>
-				<div class="col-10">
-					<input class="form-control" type="number" value="42" id="example-number-input">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
-				<div class="col-10">
-					<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="example-date-input" class="col-2 col-form-label">Date</label>
-				<div class="col-10">
-					<input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="example-month-input" class="col-2 col-form-label">Month</label>
-				<div class="col-10">
-					<input class="form-control" type="month" value="2011-08" id="example-month-input">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="example-week-input" class="col-2 col-form-label">Week</label>
-				<div class="col-10">
-					<input class="form-control" type="week" value="2011-W33" id="example-week-input">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="example-time-input" class="col-2 col-form-label">Time</label>
-				<div class="col-10">
-					<input class="form-control" type="time" value="13:45:00" id="example-time-input">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="example-color-input" class="col-2 col-form-label">Color</label>
-				<div class="col-10">
-					<input class="form-control" type="color" value="#563d7c" id="example-color-input">
-				</div>
-			</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+
 		</form>
 
 	</div>
