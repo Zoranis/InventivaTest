@@ -32,6 +32,9 @@ function populateCountries() {
 function validateForm() {
 
   $("#accountsForm").validate({
+    submitHandler: function() {
+      submitForm();
+    },
     rules: {
       userName: {
         required: true,
@@ -102,5 +105,46 @@ function loadFormEvents() {
     $("#phonePrefix").val($("#country").val());
 
   })
+
+}
+
+function clearForm(){
+
+  $("input").each(function(index,inputElement) {
+
+    $(inputElement).val('');
+
+  })
+
+}
+
+function submitForm() {
+
+  var phonePrefix = $("#phonePrefix").val();
+  var phoneSuffix = $("#phoneSuffix").val();
+  var phone = phonePrefix + phoneSuffix;
+  var country = $("#country :selected").text();
+  var formData = $("#accountsForm").serializeArray();
+
+  formData.push({"name": "phone", "value": phone});
+
+  //console.log(formData);
+
+  $.each(formData, function(index, formInput) {
+
+    if (formInput.name == "country") {
+      formInput.value = country;
+    }
+    else if (formInput.name == "termsApproved") {
+      formInput.value = true;
+    }
+
+  })
+
+  formData = $.param(formData);
+  //formData.phone = formData.prefixPhone + formData.suffixPhone;
+  //formData.termsApproved = formData.termsApproved == 'on' ? true : false;
+
+  $.post('/test', formData);
 
 }
