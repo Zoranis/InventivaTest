@@ -1,5 +1,36 @@
 $(function() {
 
+  populateCountries();
+  validateForm();
+  loadFormEvents();
+
+
+
+
+});
+
+
+
+function populateCountries() {
+
+  $.getJSON( "js/countriesCodes.json", function( data ) {
+
+    var $select = $('#country');
+    $(data).each(function (index, o) {
+      var $option = $("<option/>").attr("value", o.dial_code).text(o.name);
+      $select.append($option);
+
+    });
+
+  });
+
+  //var jsonData = $.parseJSON(rawData);
+
+
+}
+
+function validateForm() {
+
   $("#accountsForm").validate({
     rules: {
       userName: {
@@ -56,9 +87,20 @@ $(function() {
       }
     }
 
-
-
-
   });
 
-});
+}
+
+
+function loadFormEvents() {
+
+
+  // Update phone prefix on country select.
+
+  $("#country").change(function() {
+
+    $("#phonePrefix").val($("#country").val());
+
+  })
+
+}
