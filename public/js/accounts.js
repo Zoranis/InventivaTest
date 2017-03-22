@@ -4,9 +4,7 @@ $(function() {
   validateForm();
   loadFormEvents();
 
-
-
-
+  $("#successMsg").hide(); // Hide success message to show on registration success.
 });
 
 
@@ -136,7 +134,7 @@ function submitForm() {
       formInput.value = country;
     }
     else if (formInput.name == "termsApproved") {
-      formInput.value = true;
+      formInput.value = 1;
     }
 
   })
@@ -145,6 +143,8 @@ function submitForm() {
   //formData.phone = formData.prefixPhone + formData.suffixPhone;
   //formData.termsApproved = formData.termsApproved == 'on' ? true : false;
 
-  $.post('/test', formData);
+  $.post('/Account/add', formData).done(function() {
+    $("#successMsg").show();
+  });
 
 }

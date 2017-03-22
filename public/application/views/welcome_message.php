@@ -85,6 +85,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		</form>
 
+<h4 id="successMsg">Registration successful !</h4>
+
 	</div>
 
 
