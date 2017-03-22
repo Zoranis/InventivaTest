@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div class="container">
 
-		<form class="form-horizontal">
+		<form id="accountsForm" class="form-horizontal">
 
 			<div class="form-group row">
 				<label for="text-input" class="col-2 col-form-label">User Name</label>
@@ -64,11 +64,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="form-group row">
 				<label for="tel-input" class="col-2 col-form-label">Phone</label>
 				<div class="col-2">
-					<input class="form-control" name="phonePrefix" type="tel" value="" id="phonePrefix" required>
+					<input class="form-control phone-group" name="phonePrefix" type="tel" value="" id="phonePrefix" required>
 				</div>
 				-
 				<div class="col-5">
-					<input class="form-control" name="phoneSuffix" type="tel" value="" id="phoneSuffix" required>
+					<input class="form-control phone-group" name="phoneSuffix" type="tel" value="" id="phoneSuffix" required>
 				</div>
 			</div>
 
@@ -94,6 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/additional-methods.min.js" charset="utf-8"></script>
 	<script src="/js/accounts.js" charset="utf-8"></script>
 
 </body>
